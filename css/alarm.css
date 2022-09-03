@@ -1,0 +1,163 @@
+/*====================================Clock=================*/
+.clock {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #10101e;
+}
+.clock .date-time {
+  width: 350px;
+  padding: 15px 10px;
+  border: 3px solid #2e94e3;
+  border-radius: 5px 5px 0 0;
+  background-color: #10101e;
+  color: #fff;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+  transition: 0.5s;
+  transition-property: background-color, box-shadow;
+}
+
+.clock .date-time:hover {
+  background-color: #2e94e3;
+  box-shadow: 0 0 30px #2e94e3;
+}
+.clock .date-time .date {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 3px;
+}
+.clock .date-time .time {
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clock .date-time .time span:not(:last-child) {
+  position: relative;
+  margin: 0 6px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 3px;
+}
+.clock .date-time .time span:last-child {
+  background-color: #2e94e3;
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 10px;
+  padding: 0 5px;
+  border-radius: 3px;
+}
+/*=================================Alarm==========================*/
+.alarm {
+  position: absolute;
+  width: 350px;
+  height: 120px;
+  bottom: 116px;
+  right: 514px;
+  display: none;
+  transition: 2s;
+}
+.alarm.active {
+  display: block;
+}
+.content {
+  display: flex;
+  width: 372px;
+  height: 120px;
+  bottom: 148px;
+  /* right: 277px; */
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent #2e94e3 transparent #2e94e3;
+  background-color: #10101e;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+}
+
+.alarm .content.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+  cursor: no-drop;
+}
+.alarm .content .col {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+  transition-property: background-color, box-shadow;
+}
+.alarm .content .col:hover {
+  background-color: #2e94e3;
+  box-shadow: 0 0 30px #2e94e3;
+}
+.alarm .content .col select {
+  outline: none;
+  border: none;
+  height: 60%;
+  width: 100%;
+  font-size: 19px;
+  background-color: transparent;
+  color: #fff;
+  text-align: center;
+  padding: 0 0px;
+  cursor: pointer;
+  border-right: 1px solid #2e94e3;
+}
+.alarm .content .col:nth-child(3) select {
+  border-right: none;
+}
+.alarm .content .col select option {
+  background-color: #10101e;
+  height: 20px;
+}
+.alarm .set-button {
+  width: 372px;
+  height: 50px;
+  border: 2px solid;
+  border-color: transparent #2e94e3 #2e94e3 #2e94e3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.alarm .set-button button {
+  width: 80%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 19px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.5s;
+  transition-property: background-color, box-shadow;
+}
+.alarm .set-button button:hover {
+  background-color: #2e94e3;
+  box-shadow: 0 0 30px #2e94e3;
+}
+.show {
+  position: absolute;
+  bottom: 216px;
+  right: 488px;
+  width: 376px;
+  background-color: #10101e;
+  border-color: transparent #2e94e3 #2e94e3 #2e94e3;
+  border-width: 2px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5s;
+  transition-property: background-color, box-shadow, bottom;
+}
+.show:hover {
+  background-color: #2e94e3;
+  box-shadow: 0 0 30px #2e94e3;
+}
+.show.slide {
+  bottom: 38px;
+  background-color: #2e94e3;
+}

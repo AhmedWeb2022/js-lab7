@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/alarm.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="date-time">
+        <div class="date">
+          <span id="day-name">Day</span>,
+          <span id="month">Month</span>
+          <span id="day-num">00</span>,
+          <span id="year">year</span>
+        </div>
+        <div class="time">
+          <span id="hour">00</span>: <span id="minute">00</span>:
+          <span id="second">00</span>
+          <span id="period">AM</span>
+        </div>
+      </div>
+      <div class="alarm">
+        <div class="content">
+          <div class="col">
+            <select>
+              <option value="hour" selected hidden>Hour</option>
+            </select>
+          </div>
+          <div class="col">
+            <select>
+              <option value="minute" selected hidden>Minutes</option>
+            </select>
+          </div>
+          <div class="col">
+            <select>
+              <option value="AM/PM" selected hidden>AM/PM</option>
+            </select>
+          </div>
+        </div>
+        <div class="set-button">
+          <button>Set Alarm</button>
+        </div>
+      </div>
+    </div>
+
+    <button class="show">=</button>
+    <script src="js/alarm.js"></script>
+  </body>
+</html>
